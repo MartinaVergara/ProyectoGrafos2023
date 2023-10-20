@@ -53,19 +53,25 @@ Denotamos por $K_n$ al grafo completo con $n$ vértices.
 ### Definición de clique
 
 * Un subconjunto $A\subseteq V$ de $r$ vértices es una _clique_ si induce un subgrafo completo, es decir, si $G_A\cong K_r$. 
+
 * Una clique es _maximal_ si no está contenida estrictamente en ninguna otra clique de $G$. 
+
 * Una clique es _máxima_ si es de cardinalidad máxima. 
+
 * El _número clique_ de $G$, denotado $\omega(G)$, es el número de vértices en una clique máxima de $G$.  
 
 ### Definición de conjunto independiente
 
 * Un _conjunto independiente_ (o _estable_) de $G$ es un subconjunto $X\subseteq V$ de vértices no adyacentes de a pares. 
+
 * El _número de independencia_ de $G$, denotado $\alpha(G)$, es el número de vértices en un conjunto independiente de $G$ de máxima cardinalidad.
 
 ### Definición de ciclo y ciclo sin cuerdas
 
 * Una secuencia de vértices $v_0,v_1,\ldots,v_n,v_0$ es un _ciclo_ de longitud $n+1$ si $(v_{i-1}, v_i)\in E$ para todo $i\in\{1,2,\ldots,n\}$ y $(v_n, v_0)\in E$. 
+
 * Decimos que un ciclo $v_0,v_1,\ldots,v_n,v_0$  es un _ciclo simple_ si $v_i\neq v_j$ para todo $i\neq j$. 
+
 * Un ciclo simple es un _ciclo sin cuerdas_ si para cualquier par de vértices $v_i, v_j$ no consecutivos en el ciclo se tiene que $(v_i,v_j)\notin E$.
 
 Denotamos por $C_n$ al ciclo sin cuerdas con $n$ vértices. 

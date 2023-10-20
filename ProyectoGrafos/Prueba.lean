@@ -1,5 +1,3 @@
-import Mathlib.Combinatorics.SimpleGraph.Basic
+import Mathlib.Topology.Basic
 
-#check 1+1
-
-#check 1+5=6
+#check TopologicalSpace
