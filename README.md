@@ -68,9 +68,9 @@ No hay restricciones sobre las adyacencias entre vértices de $S$ y vértices de
 
 ### Resultados previos
 
-- **Observación**. _Todo conjunto independiente de $G$ es una clique de $\overline G$ y viceversa._    
+- **Observación**. *Todo conjunto independiente de $G$ es una clique de $\overline G$ y viceversa.*
 
-- **Teorema**. $G$ _es un grafo split si y solo si $\overline G$ es un grafo split._
+- **Teorema**. *$G$ es un grafo split si y solo si $\overline G$ es un grafo split.*
 
 - **Teorema** (Hammer y Simeone, 1977). 
 _Sea $G=(V,E)$ un grafo split cuyo conjunto de vértices está particionado en un conjunto estable $S$ y una clique $K$. Entonces vale exactamente una de las siguientes afirmaciones:_
