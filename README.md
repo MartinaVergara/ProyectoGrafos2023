@@ -1,8 +1,6 @@
-## Formalización de Matemática en Asistentes de Prueba
+# Formalización de la caracterización por subgrafos inducidos prohibidos de los grafos split
 
-# Formalización de la caracterización por subgrafos inducidos prohibidos de los grafos split en Lean
-
-### Introducción
+## Introducción
 
 Una clase de grafos $\mathcal{G}$ se dice _hereditaria_ si es cerrada por subgrafos inducidos (es decir, si todo subgrafo inducido de un grafo de $\mathcal{G}$ también pertenece a $\mathcal{G}$). Si $\mathcal{G}$ es un clase de grafos hereditaria entonces admite una caracterización por subgrafos inducidos prohibidos. Esto es, es posible dar una familia $\mathcal{F}$ de grafos no pertenecientes a la clase $\mathcal{G}$ para, luego, decir que un grafo está en $\mathcal{G}$ si y solo si no contiene un subgrafo inducido isomorfo a un grafo de $\mathcal{F}$.
 
@@ -12,50 +10,50 @@ El primer objetivo de este proyecto es estudiar la solidez de las definiciones y
 
 ## Primera parte
 
-### Definición de _grafo_
+* Definición de _grafo_
 En lo que sigue, dado un conjunto $A$, denotamos por $\mathcal{P}(A)$ al conjunto de partes de $A$.
 
 Un _grafo_ $G$ consiste en un conjunto finito $V$, llamado el conjunto de _vértices_, y una relación binaria irreflexiva sobre $V$, llamada la _relación de adyacencia_. La relación de adyacencia puede ser representada o bien como un conjunto $E$ de pares ordenados, o bien como una función 
 
-\[\ady: V\rightarrow \mathcal{P}(V).\] 
+$\text{ady}: V\rightarrow \mathcal{P}(V)$. 
 
-Cada par $(v,w)\in E$ es una _arista_ y $\ady(v)$ es el _conjunto de adyacencia_ de $v\in V$. Claramente,
+Cada par $(v,w)\in E$ es una _arista_ y $\text{ady}(v)$ es el _conjunto de adyacencia_ de $v\in V$. Claramente,
 
-\[(v,w)\in E\hspace{0.5cm}\text{si y solo si}\hspace{0.5cm}w \in \ady(v).\]
+$(v,w)\in E\hspace{0.5cm}\text{si y solo si}\hspace{0.5cm}w \in \text{ady}(v)$.
 
 En tal caso, decimos que $v$ y $w$ son los _extremos_ de $(v,w)$ y que $v$ y $w$ son _adyacentes_ o _vecinos_.
 
 Observemos que, como la relación es irreflexiva, para cada $v\in V$ se tiene que $(v,v)\notin E$, o equivalentemente, $v\notin \ady(v)$.
 
-### Definición de _isomorfismo de grafos_
+* Definición de _isomorfismo de grafos_
 
 Dos grafos $G=(V, E)$ y $G'=(V', E')$ son _isomorfos_, y se escribe $G\cong G'$, si existe una biyección $f:V\rightarrow V'$ tal que, para todo $v,w\in V$, 
 
-\[(v,w)\in E\hspace{0.5cm}\text{si y solo si}\hspace{0.5cm}(f(v),f(w))\in E'.\] 
+$(v,w)\in E\hspace{0.5cm}\text{si y solo si}\hspace{0.5cm}(f(v),f(w))\in E'$.
 
-#### Definición de _grafo no dirigido_
+* *Definición de _grafo no dirigido_
 
 Sea $G=(V, E)$ un grafo. El _reverso_ de $G$ es el grafo $G^{-1}=(V, E^{-1})$, donde 
 
-\[E^{-1}=\{(w,v)\mid (v,w)\in E\}.\] 
+$E^{-1}=\{(w,v)\mid (v,w)\in E\}$.
 
 La _clausura simétrica_ de $G$ es el grafo $\hat G=(V,\hat E)$, donde 
     
-\[\hat E=E\cup E^{-1}.\] 
+$\hat E=E\cup E^{-1}$.
 
 Un grafo $G=(V, E)$ se dice _no dirigido_ si su relación de adyacencia es simétrica, es decir, si $E=E^{-1}$, o equivalentemente, $E=\hat{E}$.
 
-### Definición de _subgrafo_ y _subgrafo inducido_
+* Definición de _subgrafo_ y _subgrafo inducido_
 
 Sea $G=(V,E)$ un grafo. Un _subgrafo_ de $G$ es un grafo $H=(V',E')$ tal que $V'\subseteq V$ y $E'\subseteq E$. Dado $A\subseteq V$, el _subgrafo inducido_ por $A$ es el grafo $G_A=(A,E_A)$, donde
 
-\[E_A=\{(v,w)\in E\mid v\in A, w\in A\}.\]
+$E_A=\{(v,w)\in E\mid v\in A, w\in A\}$.
 
-### Otras definiciones de interés
+* Otras definiciones de interés
 
 Sea $G=(V, E)$ un grafo no dirigido. El _complemento_ de $G$ es el grafo $\overline G=(V,\overline E)$, donde
 
-\[\overline E=\{(x,y)\in V\times V\mid x\neq y, (x,y)\notin E\}.\]
+$\overline E=\{(x,y)\in V\times V\mid x\neq y, (x,y)\notin E\}$.
 
 Un grafo $G=(V,E)$ es _completo_ si $E=\{(v,w)\in V\times V\mid v\neq w\}$.
 
@@ -71,11 +69,11 @@ Una secuencia de vértices $v_0,v_1,\ldots,v_n,v_0$ es un _ciclo_ de longitud $n
 
 Denotamos por $C_n$ al ciclo sin cuerdas con $n$ vértices. 
 
-### Definición de _grafo cordal_
+* Definición de _grafo cordal_
 
 $G$ es un _grafo cordal_ si todo ciclo de longitud estrictamente mayor que 3 tiene una cuerda, esto es, una arista que une dos vértices no consecutivos del ciclo. Equivalentemente, $G$ no contiene un subgrafo inducido isomorfo a $C_n$ para $n>3$. 
 
-### Definición de _grafo split_
+* Definición de _grafo split_
 
 A continuación, si $A, B$ y $C$ son conjuntos, escribiremos $C=A+B$ para indicar que $A\cap B=\emptyset$ y $C=A\cup B$.
 
