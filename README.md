@@ -68,14 +68,26 @@ No hay restricciones sobre las adyacencias entre vértices de $S$ y vértices de
 
 ### Resultados previos
 
-> **Observación**. Todo conjunto independiente de $G$ es una clique de $\overline G$ y viceversa.
+- **Observación**. Todo conjunto independiente de $G$ es una clique de $\overline G$ y viceversa.
 
-> **Teorema**. $G$ es un grafo split si y solo si $\overline G$ es un grafo split.
+- **Teorema**. $G$ es un grafo split si y solo si $\overline G$ es un grafo split.
 
-> **Teorema**. (Hammer y Simeone, 1977). Sea $G=(V,E)$ un grafo split cuyo conjunto de vértices está particionado en un conjunto estable $S$ y una clique $K$. Entonces vale exactamente una de las siguientes afirmaciones: (i) $|S|=\alpha(G)$ y $|K|=\omega(G)$ (en este caso, la partición es única); (ii) $|S|=\alpha(G)$ y $|K|=\omega(G)-1$ (en este caso, existe $x\in S$ tal que $K+\{x\}$ es una clique); (iii) $|S|=\alpha(G)-1$ y $|K|=\omega(G)$ (en este caso, existe $y\in K$ tal que $S+\{y\}$ es un conjunto estable).
+- **Teorema**. (Hammer y Simeone, 1977). Sea $G=(V,E)$ un grafo split cuyo conjunto de vértices está particionado en un conjunto estable $S$ y una clique $K$. Entonces vale exactamente una de las siguientes afirmaciones: 
+
+    (i) $|S|=\alpha(G)$ y $|K|=\omega(G)$ (en este caso, la partición es única); 
+
+    (ii) $|S|=\alpha(G)$ y $|K|=\omega(G)-1$ (en este caso, existe $x\in S$ tal que $K+\{x\}$ es una clique); 
+
+    (iii) $|S|=\alpha(G)-1$ y $|K|=\omega(G)$ (en este caso, existe $y\in K$ tal que $S+\{y\}$ es un conjunto estable).
     
 ### Teorema de caracterización de los grafos split
 
 La clase de los grafos split es un clase hereditaria. Por lo tanto, admite una caracterización por subgrafos inducidos prohibidos. Dicha caracterización fue dada por Földes y Hammer en 1977. 
 
-> **Teorema**. (Földes y Hammer, 1977). Sea $G=(V,E)$ un grafo no dirigido. Las siguientes afirmaciones son equivalentes: (i) $G$ es un grafo split; (ii) $G$ y $\overline G$ son grafos cordales; (iii) $G$ no contiene un subgrafo inducido isomorfo a $2K_2$, $C_4$ o $C_5$.
+- **Teorema**. (Földes y Hammer, 1977). Sea $G=(V,E)$ un grafo no dirigido. Las siguientes afirmaciones son equivalentes: 
+
+    (i) $G$ es un grafo split; 
+    
+    (ii) $G$ y $\overline G$ son grafos cordales; 
+    
+    (iii) $G$ no contiene un subgrafo inducido isomorfo a $2K_2$, $C_4$ o $C_5$.
